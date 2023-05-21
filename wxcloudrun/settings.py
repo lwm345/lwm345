@@ -66,28 +66,28 @@ WSGI_APPLICATION = 'wxcloudrun.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get("MYSQL_DATABASE", 'django_demo'),
-        'USER': os.environ.get("MYSQL_USERNAME"),
-        'HOST': os.environ.get("MYSQL_ADDRESS").split(':')[0],
-        'PORT': os.environ.get("MYSQL_ADDRESS").split(':')[1],
-        'PASSWORD': os.environ.get("MYSQL_PASSWORD"),
-        'OPTIONS': {'charset': 'utf8mb4'},
-    }
-}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'django_demo',
-#         'USER': 'root',
-#         'HOST': 'sh-cynosdbmysql-grp-nomkxspe.sql.tencentcdb.com',
-#         'PORT': '26691',
-#         'PASSWORD': 'wDeM2eWU',
+#         'NAME': os.environ.get("MYSQL_DATABASE", 'django_demo'),
+#         'USER': os.environ.get("MYSQL_USERNAME"),
+#         'HOST': os.environ.get("MYSQL_ADDRESS").split(':')[0],
+#         'PORT': os.environ.get("MYSQL_ADDRESS").split(':')[1],
+#         'PASSWORD': os.environ.get("MYSQL_PASSWORD"),
 #         'OPTIONS': {'charset': 'utf8mb4'},
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_demo',
+        'USER': 'root',
+        'HOST': 'sh-cynosdbmysql-grp-nomkxspe.sql.tencentcdb.com',
+        'PORT': '26691',
+        'PASSWORD': 'wDeM2eWU',
+        'OPTIONS': {'charset': 'utf8mb4'},
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
