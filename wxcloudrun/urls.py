@@ -16,8 +16,8 @@ Including another URLconf
 
 from wxcloudrun import views
 from django.conf.urls import url
-from login import views as loginview
-
+from login import views as login_view
+from user_info import views as user_view
 urlpatterns = (
     # 计数器接口
     url(r'^^api/count(/)?$', views.counter),
@@ -25,5 +25,6 @@ urlpatterns = (
     # 获取主页
     url(r'^^(/)?$', views.index),
 
-    url(r"login/", loginview.login),
+    url(r"login/", login_view.login),
+    url(r"user/", user_view.index),
 )
