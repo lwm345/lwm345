@@ -13,11 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.urls import include
 
 from wxcloudrun import views
 from django.conf.urls import url
 from login import views as login_view
-from user_info import views as user_view
+from user import views as user_view
+
 urlpatterns = (
     # 计数器接口
     url(r'^^api/count(/)?$', views.counter),
@@ -26,5 +28,5 @@ urlpatterns = (
     url(r'^^(/)?$', views.index),
 
     url(r"login/", login_view.login),
-    url(r"user/", user_view.index),
+    url(r"user/", include('user.urls')),
 )

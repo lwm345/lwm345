@@ -17,12 +17,12 @@ def login(request):
         # print("==============================================")
         username = request.POST.get('username')
         passowrd = request.POST.get('password')
-        print(username,passowrd)
+        print(username, passowrd)
         if username == 'root' and passowrd == '123456':
             return redirect('/')
         else:
             return render(request, 'login.html', {"error": "用户名或密码错误"})
-    if request.method=='GET':
+    if request.method == 'GET':
         return render(request, 'login.html')
 
 
