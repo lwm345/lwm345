@@ -1,17 +1,17 @@
 from django.urls import path
 from user import views
-
+from django.conf.urls import url
 urlpatterns = [
     # 将函数绑定至对应路由
-    path('', views.main_page),
+    url('', views.main_page),
 
-    path('add/',views.add_note),
+    url('add/$',views.add_note),
 
-    path('del/',views.del_note),
+    url('del/',views.del_note),
 
-    path('modify/',views.modify_note),
+    url('modify/',views.modify_note),
 
-    path('change/',views.change_note_status)
+    url('change/',views.change_note_status)
 
 
 ]

@@ -9,7 +9,7 @@ from user.models import Note
 
 
 # Create your views here.
-Å
+
 # 主页面
 def main_page(request):
     # 获取所有未被删除的文章

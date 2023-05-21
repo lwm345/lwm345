@@ -35,10 +35,10 @@ function addNote() {
     if (isNull) {
         return
     }
-    sendAjax(d, '/app/add/', function (value) {
+    sendAjax(d, '/user/add/', function (value) {
         if (value === 1) {
             swal({title: "添加成功", text: "", type: "success", timer: 2000}, function () {
-                location.href = '/app/'
+                location.href = '/user/'
             })
         }
         if (value === 0) {
@@ -72,7 +72,7 @@ function delNote(n_id) {
             var data = {
                 'n_id': n_id,
             }
-            sendAjax(data, '/app/del/', function (value) {
+            sendAjax(data, '/user/del/', function (value) {
                 if (value === 1) {
                     swal({title: "删除成功", text: "", type: "success", timer: 2000}, function () {
                         location.reload()
@@ -92,7 +92,7 @@ function finishNote(n_id) {
         'n_id': n_id,
         'status': 'F'
     }
-    sendAjax(data, '/app/change/', function (value) {
+    sendAjax(data, '/user/change/', function (value) {
         if (value === 1) {
             swal({title: "记事已完成", text: "", type: "success", timer: 2000}, function () {
                 location.reload()
@@ -123,7 +123,7 @@ function modifyNote() {
     if (isNull) {
         return
     }
-    sendAjax(d, '/app/add/', function (value) {
+    sendAjax(d, '/user/add/', function (value) {
         if (value === 1) {
             swal({
                 title: "修改成功",
@@ -131,7 +131,7 @@ function modifyNote() {
                 type: "success",
                 timer: 2000
             }, function () {
-                location.href = '/app/'
+                location.href = '/user/'
             })
         }
         if (value === 0) {
