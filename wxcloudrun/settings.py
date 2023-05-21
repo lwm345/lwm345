@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'wxcloudrun'
+    'wxcloudrun',
+    'login'
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,17 @@ DATABASES = {
         'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'django_demo',
+#         'USER': 'root',
+#         'HOST': 'sh-cynosdbmysql-grp-nomkxspe.sql.tencentcdb.com',
+#         'PORT': '26691',
+#         'PASSWORD': 'wDeM2eWU',
+#         'OPTIONS': {'charset': 'utf8mb4'},
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -178,7 +189,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = False
-
+# APPEND_SLASH = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
